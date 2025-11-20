@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selector Challenge - Enid Layout</title>
+    
+    <style>
+        * {
+            box-sizing: border-box; 
+            margin: 0;
+            padding: 0;
+            font-family: serif; 
+        }
+
+        #block-one, #block-two {
+            width: 100%; 
+            max-width: 1200px;
+            margin: 0 auto;
+            line-height: 1.2;
+            padding: 100px 50px;
+        }
+
+        #block-one {
+            background-color: #e8e3d6;
+            color: #3b332c;
+        }
+
+        #block-two {
+            background-color: #638575;
+            color: white;
+        }
+
+        .small-header {
+            font-size: 12px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .main-text {
+            font-size: 70px;
+            font-weight: 400;
+        }
+
+        #block-one .main-text::first-line {
+            font-weight: 700;
+        }
+
+        .divider {
+            border-top: 2px solid rgba(255, 255, 255, 0.4);
+            border-bottom: 2px solid rgba(255, 255, 255, 0.4);
+            height: 1px;
+            margin: 10px 0;
+        }
+
+        #block-two .small-header {
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+    </style>
+</head>
+<body>
+
+    <div id="block-one">
+        <p class="small-header">Everyone Needs Infinite Dreams</p>
+        <h1 class="main-text">Enid is an amplification studio that builds brands that resound.</h1>
+    </div>
+
+    <div id="block-two">
+        <p class="small-header">Each New Idea Defined</p>
+        <div class="divider"></div>
+        <h2 class="main-text">We stand firm on our values that sit central to everything we do.</h2>
+    </div>
+
+</body>
+</html>

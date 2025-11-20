@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Navigation Bar</title>
+    
+    <style>
+        * {
+            font-family: Arial, sans-serif;
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        #header, footer {
+            margin-bottom: 0;
+        }
+
+        #header {
+            background-color: #0b1a28;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            height: 70px;
+        }
+
+        #header nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        #header nav ul li {
+            margin-left: 25px; 
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: #cccccc;
+            font-size: 16px;
+            padding: 23px 0;
+            display: block;
+        }
+
+        .nav-link:hover {
+            color: white;
+        }
+
+        #header nav ul li:first-child .nav-link {
+            color: #6fb2e3;
+            font-weight: bold;
+        }
+
+        .buy-theme {
+            background-color: #378edc;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-weight: bold;
+            padding-top: 10px; 
+            padding-bottom: 10px;
+        }
+
+        .buy-theme:hover {
+            background-color: #2a6db0;
+            color: white;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <header id="header">
+        <div class="logo">BeBlog Mansi</div>
+        <nav>
+            <ul>
+                <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Web design</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">WordPress</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">About us</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">BeAdvice</a></li>
+                <li class="nav-item"><a href="#" class="nav-link buy-theme">Buy BeTheme</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- <main style="padding: 20px 20px 50px;">
+        <h1>Content Area</h1>
+        <p>This is where the main content of the page would go.</p>
+    </main> -->
+
+    <footer>
+        <p>&copy; 2025 Navigation Bar Example</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grand Launch Invitation</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            background-color: lightgrey;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .invitation-card {
+            width: 80%;
+            max-width: 600px;
+            background-color: white;
+            padding: 30px;
+            margin: 20px;
+            border: 3px solid blue;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .invitation-card h2 {
+            font-family: 'Playfair Display', serif;
+            color: #333;
+            font-size: 2em;
+            margin-top: 10px;
+        }
+
+        .invitation-card p {
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .logo-image {
+            max-width: 150px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        .inner-image {
+            width: 300px;
+            height: auto;
+            margin: 20px auto;
+            display: block;
+            border-radius: 8px;
+        }
+        
+        .join-button {
+            background-color: #ff4500;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1em;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: background-color 0.3s ease;
+        }
+
+        .join-button:hover {
+            background-color: #cc3700;
+        }
+
+        .event-details {
+            text-align: left;
+            margin: 20px auto;
+            width: 80%;
+        }
+
+        .event-details strong {
+            display: inline-block;
+            width: 70px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="invitation-card">
+
+        <img src="https://via.placeholder.com/150/0000FF/FFFFFF?text=Company+Logo" alt="Company Logo" class="logo-image">
+
+        <h2>You're Invited to Our Grand Launch!</h2>
+
+        <p class="event-details">
+            <strong>Date:</strong> October 27, 2025<br>
+            <strong>Time:</strong> 6:00 PM - 9:00 PM<br>
+            <strong>Venue:</strong> The Grand Ballroom, City Center
+        </p>
+
+        <img src="https://via.placeholder.com/300/4682B4/FFFFFF?text=New+Product" alt="Product Image" class="inner-image">
+
+        <p>
+            Join us as we unveil our innovative new product and celebrate the official launch of our company. Our mission is to transform the industry with creativity and excellence. We look forward to sharing this momentous occasion with you.
+        </p>
+        
+        <button class="join-button">Join Now!</button>
+
+    </div>
+
+</body>
+</html>

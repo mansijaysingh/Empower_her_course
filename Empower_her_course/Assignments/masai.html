@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masai Course Box Design</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 40px;
+            gap: 25px;
+            background-color: #f7f7f7;
+        }
+
+        .course-card, .course-card-red {
+            width: 330px;
+            min-height: 480px;
+            border-radius: 20px;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .course-card {
+            background-color: white;
+            border: 1px solid #e0e0e0;
+        }
+
+        .course-card:hover {
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            border-color: transparent;
+        }
+
+        .course-card-red {
+            background-color: #f70744;
+            color: white;
+            box-shadow: 0 10px 20px rgba(247, 7, 68, 0.3);
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .logo-box {
+            width: 50px;
+            height: 50px;
+            background-color: white;
+            border-radius: 10px;
+            margin-right: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 5px;
+        }
+
+        .logo-box img {
+            width: 100%;
+            height: auto;
+        }
+
+        .header p {
+            font-size: 14px;
+            color: #555;
+            font-weight: 500;
+        }
+        
+        .course-card-red .header p {
+            color: white;
+            font-weight: 400;
+        }
+
+        .course-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 25px;
+            line-height: 1.3;
+            min-height: 100px; 
+        }
+
+        .details-section {
+            margin-top: auto;
+        }
+
+        .detail-row {
+            display: flex;
+            font-size: 14px;
+            margin-bottom: 10px;
+            color: #777;
+        }
+        
+        .course-card-red .detail-row {
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .duration, .test-date {
+            margin-right: 20px;
+            font-weight: 500;
+        }
+
+        .buttons-section {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .btn {
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 14px;
+            padding: 12px 15px;
+            border-radius: 5px;
+            display: inline-flex;
+            align-items: center;
+            transition: background-color 0.2s, box-shadow 0.2s;
+        }
+
+        .btn-primary {
+            background-color: #f70744;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: #d1063a;
+        }
+
+        .btn-secondary {
+            background-color: white;
+            border: 1px solid #f70744;
+            color: #f70744;
+        }
+
+        .btn-secondary:hover {
+            background-color: #fff0f3;
+            box-shadow: 0 2px 5px rgba(247, 7, 68, 0.2);
+        }
+
+        .course-card-red .btn-primary {
+            background-color: white;
+            color: #f70744;
+        }
+
+        .course-card-red .btn-secondary {
+            background-color: #f70744;
+            color: white;
+            border-color: white;
+        }
+        
+        .course-card-red .btn-secondary:hover {
+            background-color: #e0063c;
+            box-shadow: 0 2px 5px rgba(255, 255, 255, 0.3);
+        }
+
+        .btn i {
+            margin-left: 8px;
+            font-size: 1em;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <div class="course-card">
+            <div class="header">
+                <div class="logo-box">
+                    <img src="https://i.imgur.com/8QkP6V1.png" alt="IIM Sirmaur Logo">
+                </div>
+                <p>IIM Sirmaur</p>
+            </div>
+            
+            <h3 class="course-title">EDGE: Essentials of Data Analytics, Gen AI & Execution</h3>
+            
+            <div class="details-section">
+                <div class="detail-row">
+                    <span class="duration">06 months</span>
+                    <span>Online</span>
+                </div>
+                <div class="detail-row">
+                    <span class="test-date">Qualifier test - 12th Nov 2025</span>
+                </div>
+            </div>
+
+            <div class="buttons-section">
+                <a href="#" class="btn btn-primary">Learn more <i class="fa-solid fa-arrow-right"></i></a>
+                <a href="#" class="btn btn-secondary">Brochure <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </div>
+
+        <div class="course-card">
+            <div class="header">
+                <div class="logo-box">
+                    <img src="https://i.imgur.com/gK2Jd9x.png" alt="Vishlesan I-Hub IIT Patna Logo">
+                </div>
+                <p>Vishlesan I-Hub IIT Patna</p>
+            </div>
+            
+            <h3 class="course-title">Product Management and Agentic AI</h3>
+            
+            <div class="details-section">
+                <div class="detail-row">
+                    <span class="duration">06 months</span>
+                    <span>Online</span>
+                </div>
+                <div class="detail-row">
+                    <span class="test-date">Qualifier test - 12th Nov 2025</span>
+                </div>
+            </div>
+
+            <div class="buttons-section">
+                <a href="#" class="btn btn-primary">Learn more <i class="fa-solid fa-arrow-right"></i></a>
+                <a href="#" class="btn btn-secondary">Brochure <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </div>
+
+        <div class="course-card-red">
+            <div class="header">
+                <div class="logo-box">
+                    <img src="https://i.imgur.com/gK2Jd9x.png" alt="Vishlesan I-Hub IIT Patna Logo">
+                </div>
+                <p>Vishlesan I-Hub IIT Patna</p>
+            </div>
+            
+            <h3 class="course-title">Certification Program in Data Analytics with Gen & Agentic AI</h3>
+            
+            <div class="details-section">
+                <div class="detail-row">
+                    <span class="duration">06 months</span>
+                    <span>Online</span>
+                </div>
+                <div class="detail-row">
+                    <span class="test-date">Qualifier test - 9th Nov 2025</span>
+                </div>
+            </div>
+
+            <div class="buttons-section">
+                <a href="#" class="btn btn-primary">Learn more <i class="fa-solid fa-arrow-right"></i></a>
+                <a href="#" class="btn btn-secondary">Brochure <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </div>
+        
+        <div class="course-card">
+            <div class="header">
+                <div class="logo-box">
+                    <img src="https://i.imgur.com/83p0q7K.png" alt="IIM Trichy Logo">
+                </div>
+                <p>IIM Trichy</p>
+            </div>
+            
+            <h3 class="course-title">Product Management in the Agentic AI Era</h3>
+            
+            <div class="details-section">
+                <div class="detail-row">
+                    <span class="duration">06 months</span>
+                    <span>Online</span>
+                </div>
+                <div class="detail-row">
+                    <span class="test-date">Qualifier test - 12th Nov 2025</span>
+                </div>
+            </div>
+
+            <div class="buttons-section">
+                <a href="#" class="btn btn-primary">Learn more <i class="fa-solid fa-arrow-right"></i></a>
+                <a href="#" class="btn btn-secondary">Brochure <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </div>
+
+        <div class="course-card">
+            <div class="header">
+                <div class="logo-box">
+                    <img src="https://i.imgur.com/V7Rz72k.png" alt="iHUB DivyaSampark, IIT Roorkee Logo">
+                </div>
+                <p>iHUB DivyaSampark, IIT Roorkee</p>
+            </div>
+            
+            <h3 class="course-title">Future-Ready Product Management with Applied AI Program</h3>
+            
+            <div class="details-section">
+                <div class="detail-row">
+                    <span class="duration">6 months</span>
+                    <span>Online</span>
+                </div>
+                <div class="detail-row">
+                    <span class="test-date">Qualifier test - 12th Nov 2025</span>
+                </div>
+            </div>
+
+            <div class="buttons-section">
+                <a href="#" class="btn btn-primary">Learn more <i class="fa-solid fa-arrow-right"></i></a>
+                <a href="#" class="btn btn-secondary">Brochure <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </div>
+        
+        <div class="course-card">
+            <div class="header">
+                <div class="logo-box">
+                    <img src="https://i.imgur.com/G4fB8hB.png" alt="NMIMS CDOE Logo">
+                </div>
+                <p>NMIMS CDOE</p>
+            </div>
+            
+            <h3 class="course-title">Online MBA</h3>
+            
+            <div class="details-section">
+                <div class="detail-row">
+                    <span class="duration">02 Years</span>
+                    <span>Online</span>
+                </div>
+                <div class="detail-row">
+                    <span class="test-date">Qualifier test - 12th Nov 2025</span>
+                </div>
+            </div>
+
+            <div class="buttons-section">
+                <a href="#" class="btn btn-primary">Learn more <i class="fa-solid fa-arrow-right"></i></a>
+                <a href="#" class="btn btn-secondary">Brochure <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
