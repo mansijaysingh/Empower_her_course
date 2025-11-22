@@ -1,3 +1,5 @@
+
+
 // ================================================================
 // 1. Template Literals + Expressions
 // ================================================================
@@ -8,11 +10,9 @@ const resultA = `5 + 7 = ${5 + 7}`;
 console.log("1a) Template Literal with Expression:", resultA);
 
 // b) Create a multi-line string using template literals (3 lines).
-const multiLine = `
-This is line one.
+const multiLine = `This is line one.
 This is line two.
-This is line three.
-`;
+This is line three.`;
 console.log("1b) Multi-line String:", multiLine);
 
 // c) Given firstName = "John" and lastName = "Doe", print the full name using a template literal.
@@ -42,12 +42,9 @@ console.log("Calling obj.test(): (See output below)");
 obj.test();
 console.log("Explanation: Arrow functions do not have their own 'this' binding. They capture 'this' from their surrounding (lexical) scope. In this global execution context, 'this' inside the arrow function refers to the global object (or 'undefined' in strict mode/modules), which does not have a 'value' property defined in the way the object does. Hence, it logs undefined.");
 
-
 // c) Rewrite it using a normal function so that printing works.
 const objFixed = {
   value: 50,
-  // Normal functions create their own 'this' binding, which, when called as a method,
-  // refers to the object itself (objFixed).
   test() {
     console.log("2c) Fixed function output:", this.value);
   }
@@ -72,9 +69,7 @@ const merged = { ...a, ...b };
 console.log("3b) Merged Object:", merged);
 
 // c) Write a function maxValue(...nums) (rest operator) that returns the largest number.
-const maxValue = (...nums) => {
-    return Math.max(...nums); // Use spread inside Math.max
-};
+const maxValue = (...nums) => Math.max(...nums);
 console.log("3c) Max Value (1, 5, 2, 8):", maxValue(1, 5, 2, 8));
 
 
@@ -95,7 +90,6 @@ console.log("4b) Object Destructuring:", brand);
 
 // c) Safely access the following using optional chaining: const info = {};
 const info = {};
-// Access info.contact.phone. The 'contact' property is missing, so optional chaining prevents a TypeError.
 const phoneNumber = info.contact?.phone;
 console.log("4c) Optional Chaining (missing intermediate property):", phoneNumber);
 
@@ -106,18 +100,12 @@ console.log("4c) Optional Chaining (missing intermediate property):", phoneNumbe
 printSection("5. Scoping (let/var/const)");
 
 // a) What will this print? for (var i = 0; i < 3; i++) {} console.log(i);
-for (var i = 0; i < 3; i++) {
-    // i is var-scoped (function/global)
-}
-// i is accessible outside the loop and holds the final incremented value (3).
+for (var i = 0; i < 3; i++) {}
 console.log("5a) var loop output:", i);
 
 // b) What will this print? for (let j = 0; j < 3; j++) {} console.log(j);
 try {
-    for (let j = 0; j < 3; j++) {
-        // j is let-scoped (block-scoped)
-    }
-    // This line will throw a ReferenceError
+    for (let j = 0; j < 3; j++) {}
     console.log("5b) let loop output:", j);
 } catch (error) {
     console.error("5b) let loop output (Error):", error.name + ": " + error.message);
@@ -165,9 +153,7 @@ const combinedArr = [...arr_a_comb, ...arr_b_comb];
 console.log("7b) Combined Array:", combinedArr);
 
 // c) Write a function using rest: printNames("A","B","C") → returns ["A","B","C"].
-const printNames = (...names) => {
-    return names; // The rest operator collects all arguments into the 'names' array
-};
+const printNames = (...names) => names;
 console.log("7c) Rest Operator (Collected Names):", printNames("A", "B", "C"));
 
 
@@ -178,27 +164,23 @@ printSection("8. Object Destructuring & Shorthand");
 
 // a) Destructure the following: const user = { id: 101, status: "active" };
 const user_obj = { id: 101, status: "active" };
-const { id: userId, status } = user_obj; // Renaming id for clarity
+const { id: userId, status } = user_obj;
 console.log(`8a) Object Destructuring: ID=${userId}, Status=${status}`);
 
 // b) Convert this to shorthand: const id = 101; const role = "admin"; const user = { id: id, role: role };
 const id_shorthand = 101;
 const role_shorthand = "admin";
-const user_shorthand = {
-  id_shorthand,
-  role_shorthand
-};
+const user_shorthand = { id: id_shorthand, role: role_shorthand };
 console.log("8b) Object Shorthand:", user_shorthand);
 
 // c) Create an object using shorthand and add a method using shorthand syntax.
 const name_shorthand = "Widget";
 const price_shorthand = 50;
 const product_shorthand = {
-  name_shorthand,
-  price_shorthand,
-  // Method Shorthand Syntax
+  name: name_shorthand,
+  price: price_shorthand,
   getPrice() {
-    return this.price_shorthand;
+    return this.price;
   }
 };
 console.log("8c) Object & Method Shorthand:", product_shorthand);
@@ -236,7 +218,7 @@ console.log("10b) isAdult(15):", isAdult(15));
 console.log("10b) isAdult(25):", isAdult(25));
 
 // c) Create an arrow function double that doubles a number.
-const double = n => n * 2;
+const double = (n) => n * 2;
 console.log("10c) double(7):", double(7));
 
 
@@ -257,7 +239,7 @@ console.log("11b) Array with element at start:", arrayStart);
 
 // c) Merge two objects and override one property using spread.
 const obj1 = { id: 1, type: "old", value: 10 };
-const obj2 = { value: 99, newProp: "z" }; // Overrides 'value'
+const obj2 = { value: 99, newProp: "z" };
 const mergedOverride = { ...obj1, ...obj2 };
 console.log("11c) Merged and Overridden Object:", mergedOverride);
 
@@ -279,23 +261,19 @@ console.log("12a) Access Existing City:", userA.address?.city);
 // b) Access user.job.title safely (should print undefined).
 const userB = {
   name: "Bob"
-  // job property is missing
 };
-// Optional chaining ensures that if 'job' is undefined/null, the expression stops 
-// and returns undefined instead of throwing an error.
 console.log("12b) Access Missing Job Title:", userB.job?.title);
 
 // c) Write an example where optional chaining prevents a runtime error.
 const dataList = [
     { id: 1, config: { timeout: 1000 } },
-    { id: 2, config: null } // Intermediate property is null
+    { id: 2, config: null }
 ];
 console.log("12c) Preventing Runtime Error:");
 
-// This would throw a TypeError for dataList[1] without ?.
 const timeout1 = dataList[0].config?.timeout;
 const timeout2 = dataList[1].config?.timeout;
 
 console.log("Timeout for ID 1:", timeout1);
-// This would error if it were dataList[1].config.timeout
-console.log("Timeout for ID 2:", timeout2);
+const timeout2Display = timeout2 ?? "N/A";
+console.log("Timeout for ID 2:", timeout2Display);
