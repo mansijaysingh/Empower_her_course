@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive DOM Manipulation</title>
+    <style>
+        /* Basic styling to make it look decent */
+        #target-div {
+            width: 300px;
+            height: 150px;
+            border: 2px solid black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+            padding: 10px;
+        }
+        .controls {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="controls">
+        <input type="text" id="color-input" placeholder="Enter color name (e.g., red)">
+        <button id="bg-btn">Change Background</button>
+    </div>
+
+    <div class="controls">
+        <input type="text" id="text-input" placeholder="Enter text content">
+        <button id="text-btn">Update Text</button>
+    </div>
+
+    <div id="target-div">I will change!</div>
+
+    <script src="index.js"></script>
+</body>
+</html>
